@@ -2,7 +2,7 @@
   <div class="home">
     <v-header :show="false"></v-header>
 
-    <div class="container">
+    <div class="content">
       <router-link class="item" to="/picker">
         <i class="fa fa-pinterest-p"></i>
         <p class="text">Picker</p>
@@ -13,7 +13,10 @@
         <p class="text">Address</p>
       </router-link>
 
-      <router-link class="item" to=""></router-link>
+      <router-link class="item" to="/popup">
+        <i class="fa fa-tripadvisor"></i>
+        <p class="text">popup</p>
+      </router-link>
     </div>
   </div>
 </template>
@@ -33,7 +36,7 @@
   @import "../styles/variables"
 
   .home
-    .container
+    .content
       display: flex
       .item
         position: relative

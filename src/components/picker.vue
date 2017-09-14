@@ -20,6 +20,7 @@
             <li></li>
             <li
               v-for="(option, index) in options"
+              @click="selectOption(index)"
               :class="{
                 'current': option == value,
                 'one': Math.abs(index - currentIndex) == 1,
@@ -106,6 +107,12 @@
         this.currentIndex = index;
         this.setValue(this.options[index]);
         this.translateY = page * this.height;
+      },
+      selectOption(index) {
+        this.translateY = -this.height * index;
+
+        this.currentIndex = index;
+        this.setValue(this.options[index]);
       },
       handleTouchstart(e) {
         this.distanceY = 0;
